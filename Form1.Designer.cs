@@ -33,7 +33,6 @@
             this.PartofSpeech = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.directorySearcher1 = new System.DirectoryServices.DirectorySearcher();
             this.searchtxt = new System.Windows.Forms.TextBox();
             this.txtenter = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
@@ -445,12 +444,6 @@
             this.tabPage4.Text = "Quiz History";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
-            // directorySearcher1
-            // 
-            this.directorySearcher1.ClientTimeout = System.TimeSpan.Parse("-00:00:01");
-            this.directorySearcher1.ServerPageTimeLimit = System.TimeSpan.Parse("-00:00:01");
-            this.directorySearcher1.ServerTimeLimit = System.TimeSpan.Parse("-00:00:01");
-            // 
             // searchtxt
             // 
             this.searchtxt.Location = new System.Drawing.Point(670, 36);
@@ -646,7 +639,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ListBox listBoxTopics;
-        private System.DirectoryServices.DirectorySearcher directorySearcher1;
         private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.RadioButton rdiAZ;
         private System.Windows.Forms.RadioButton rdoZA;

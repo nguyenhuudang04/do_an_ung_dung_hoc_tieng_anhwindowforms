@@ -160,13 +160,13 @@ namespace windowforms_sqlsever
 
         private void button2_Click(object sender, EventArgs e)
         {
-            string searchQuery = txtSearch.Text.ToLower(); // Lấy từ khóa tìm kiếm trong ô TextBox
+            string searchQuery = textBox3.Text.ToLower(); // Lấy từ khóa tìm kiếm trong ô TextBox
 
             // Nếu ô tìm kiếm trống, hiển thị toàn bộ danh sách chủ đề
             if (string.IsNullOrEmpty(searchQuery))
             {
-                listBoxTopics.Items.Clear();
-                listBoxTopics.Items.AddRange(topics.ToArray());
+                listBox1.Items.Clear();
+                listBox1.Items.AddRange(topics.ToArray());
             }
             else
             {
@@ -177,8 +177,8 @@ namespace windowforms_sqlsever
                     .ToList();
 
                 // Cập nhật ListBox
-                listBoxTopics.Items.Clear();
-                listBoxTopics.Items.AddRange(filteredTopics.ToArray());
+                listBox1.Items.Clear();
+                listBox1.Items.AddRange(filteredTopics.ToArray());
             }
 
             // Nếu không tìm thấy kết quả, thông báo người dùng
@@ -187,5 +187,6 @@ namespace windowforms_sqlsever
                 MessageBox.Show("Không tìm thấy chủ đề phù hợp. Vui lòng thử lại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
+
     }
 }
