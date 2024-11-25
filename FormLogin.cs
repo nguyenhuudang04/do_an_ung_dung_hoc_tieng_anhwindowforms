@@ -32,5 +32,11 @@ namespace windowforms_sqlsever
             }
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            FormRegister registerForm = new FormRegister();
+            registerForm.ShowDialog();
+        }
     }
 }
