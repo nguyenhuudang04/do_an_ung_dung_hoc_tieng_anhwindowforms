@@ -112,15 +112,7 @@ namespace windowforms_sqlsever
             UpdateListBox(sortedTopics);
         }
 
-        private void rdoZA_CheckedChanged(object sender, EventArgs e)
-        {
-            if (rdoZA.Checked)
-            {
-                // Sắp xếp danh sách từ Z-A
-                var sortedTopics = topics.OrderByDescending(t => t).ToList();
-                UpdateListBox(sortedTopics);
-            }
-        }
+        
 
         private void listBoxTopics_SelectedIndexChanged_1(object sender, EventArgs e)
         {
@@ -158,35 +150,44 @@ namespace windowforms_sqlsever
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        //private void button2_Click(object sender, EventArgs e)
+        //{
+        //    string searchQuery = textBox3.Text.ToLower(); // Lấy từ khóa tìm kiếm trong ô TextBox
+
+        //    // Nếu ô tìm kiếm trống, hiển thị toàn bộ danh sách chủ đề
+        //    if (string.IsNullOrEmpty(searchQuery))
+        //    {
+        //        listBox1.Items.Clear();
+        //        listBox1.Items.AddRange(topics.ToArray());
+        //    }
+        //    else
+        //    {
+        //        // Tìm các chủ đề phù hợp với từ khóa
+        //        var filteredTopics = topics
+        //            .Where(topic => topic.ToLower().Contains(searchQuery)) // Lọc theo từ khóa
+        //            .OrderBy(topic => topic.StartsWith(searchQuery) ? 0 : 1) // Sắp xếp ưu tiên từ khóa
+        //            .ToList();
+
+        //        // Cập nhật ListBox
+        //        listBox1.Items.Clear();
+        //        listBox1.Items.AddRange(filteredTopics.ToArray());
+        //    }
+
+        //    // Nếu không tìm thấy kết quả, thông báo người dùng
+        //    if (listBoxTopics.Items.Count == 0)
+        //    {
+        //        MessageBox.Show("Không tìm thấy chủ đề phù hợp. Vui lòng thử lại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        //    }
+        //}
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            string searchQuery = textBox3.Text.ToLower(); // Lấy từ khóa tìm kiếm trong ô TextBox
 
-            // Nếu ô tìm kiếm trống, hiển thị toàn bộ danh sách chủ đề
-            if (string.IsNullOrEmpty(searchQuery))
-            {
-                listBox1.Items.Clear();
-                listBox1.Items.AddRange(topics.ToArray());
-            }
-            else
-            {
-                // Tìm các chủ đề phù hợp với từ khóa
-                var filteredTopics = topics
-                    .Where(topic => topic.ToLower().Contains(searchQuery)) // Lọc theo từ khóa
-                    .OrderBy(topic => topic.StartsWith(searchQuery) ? 0 : 1) // Sắp xếp ưu tiên từ khóa
-                    .ToList();
-
-                // Cập nhật ListBox
-                listBox1.Items.Clear();
-                listBox1.Items.AddRange(filteredTopics.ToArray());
-            }
-
-            // Nếu không tìm thấy kết quả, thông báo người dùng
-            if (listBoxTopics.Items.Count == 0)
-            {
-                MessageBox.Show("Không tìm thấy chủ đề phù hợp. Vui lòng thử lại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
         }
 
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
