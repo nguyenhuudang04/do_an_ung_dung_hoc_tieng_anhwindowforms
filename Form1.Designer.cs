@@ -5,25 +5,24 @@
         
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblWord = new System.Windows.Forms.Label();
             this.txtenter = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblMeaning = new System.Windows.Forms.Label();
             this.listBoxTopics = new System.Windows.Forms.ListBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.txtSearch = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.btnSearch = new System.Windows.Forms.Button();
+            this.txtTopic = new System.Windows.Forms.TextBox();
+            this.lblPartOfSpeech = new System.Windows.Forms.Label();
+            this.lblTopic = new System.Windows.Forms.Label();
+            this.txtWord = new System.Windows.Forms.TextBox();
+            this.cmbPartOfSpeech = new System.Windows.Forms.ComboBox();
+            this.txtMeaning = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.btnSearch = new System.Windows.Forms.Button();
+            this.btnSearchList = new System.Windows.Forms.Button();
             this.searchtxt = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Word = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -45,7 +44,6 @@
             this.button3 = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -54,12 +52,12 @@
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage6 = new System.Windows.Forms.TabPage();
-            this.button5 = new System.Windows.Forms.Button();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.button8 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -80,10 +78,10 @@
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Controls.Add(this.tabPage4);
             this.tabControl1.Controls.Add(this.tabPage6);
-            this.tabControl1.Location = new System.Drawing.Point(2, 60);
+            this.tabControl1.Location = new System.Drawing.Point(-4, 67);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(873, 566);
+            this.tabControl1.Size = new System.Drawing.Size(902, 521);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
@@ -93,7 +91,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(865, 537);
+            this.tabPage1.Size = new System.Drawing.Size(894, 492);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Topic";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -101,33 +99,33 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.lblWord);
             this.groupBox1.Controls.Add(this.txtenter);
-            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.lblMeaning);
             this.groupBox1.Controls.Add(this.listBoxTopics);
-            this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Controls.Add(this.txtSearch);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Controls.Add(this.comboBox1);
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Location = new System.Drawing.Point(3, 6);
+            this.groupBox1.Controls.Add(this.btnSearch);
+            this.groupBox1.Controls.Add(this.txtTopic);
+            this.groupBox1.Controls.Add(this.lblPartOfSpeech);
+            this.groupBox1.Controls.Add(this.lblTopic);
+            this.groupBox1.Controls.Add(this.txtWord);
+            this.groupBox1.Controls.Add(this.cmbPartOfSpeech);
+            this.groupBox1.Controls.Add(this.txtMeaning);
+            this.groupBox1.Location = new System.Drawing.Point(0, 6);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(856, 524);
+            this.groupBox1.Size = new System.Drawing.Size(891, 486);
             this.groupBox1.TabIndex = 16;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "groupBox1";
             // 
-            // label2
+            // lblWord
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(23, 44);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(137, 25);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Enter the word";
+            this.lblWord.AutoSize = true;
+            this.lblWord.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblWord.Location = new System.Drawing.Point(23, 44);
+            this.lblWord.Name = "lblWord";
+            this.lblWord.Size = new System.Drawing.Size(137, 25);
+            this.lblWord.TabIndex = 3;
+            this.lblWord.Text = "Enter the word";
             // 
             // txtenter
             // 
@@ -137,16 +135,17 @@
             this.txtenter.TabIndex = 15;
             this.txtenter.Text = "Add";
             this.txtenter.UseVisualStyleBackColor = true;
+            //this.txtenter.Click += new System.EventHandler(this.txtenter_Click);
             // 
-            // label3
+            // lblMeaning
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(23, 100);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(170, 25);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Enter the meaning";
+            this.lblMeaning.AutoSize = true;
+            this.lblMeaning.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMeaning.Location = new System.Drawing.Point(23, 100);
+            this.lblMeaning.Name = "lblMeaning";
+            this.lblMeaning.Size = new System.Drawing.Size(170, 25);
+            this.lblMeaning.TabIndex = 4;
+            this.lblMeaning.Text = "Enter the meaning";
             // 
             // listBoxTopics
             // 
@@ -258,76 +257,78 @@
             this.listBoxTopics.TabIndex = 9;
             this.listBoxTopics.SelectedIndexChanged += new System.EventHandler(this.listBoxTopics_SelectedIndexChanged_1);
             // 
-            // button1
+            // btnSearch
             // 
-            this.button1.Location = new System.Drawing.Point(588, 198);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(90, 35);
-            this.button1.TabIndex = 10;
-            this.button1.Text = "Search";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnSearch.Location = new System.Drawing.Point(588, 198);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(90, 35);
+            this.btnSearch.TabIndex = 10;
+            this.btnSearch.Text = "Search";
+            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.button1_Click);
             // 
-            // txtSearch
+            // txtTopic
             // 
-            this.txtSearch.Location = new System.Drawing.Point(208, 198);
-            this.txtSearch.Multiline = true;
-            this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(346, 30);
-            this.txtSearch.TabIndex = 12;
-            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
+            this.txtTopic.Location = new System.Drawing.Point(208, 198);
+            this.txtTopic.Multiline = true;
+            this.txtTopic.Name = "txtTopic";
+            this.txtTopic.Size = new System.Drawing.Size(346, 30);
+            this.txtTopic.TabIndex = 12;
+            this.txtTopic.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
-            // label4
+            // lblPartOfSpeech
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(23, 152);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(141, 25);
-            this.label4.TabIndex = 5;
-            this.label4.Text = "Part of Speech";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
+            this.lblPartOfSpeech.AutoSize = true;
+            this.lblPartOfSpeech.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPartOfSpeech.Location = new System.Drawing.Point(23, 152);
+            this.lblPartOfSpeech.Name = "lblPartOfSpeech";
+            this.lblPartOfSpeech.Size = new System.Drawing.Size(141, 25);
+            this.lblPartOfSpeech.TabIndex = 5;
+            this.lblPartOfSpeech.Text = "Part of Speech";
+            this.lblPartOfSpeech.Click += new System.EventHandler(this.label4_Click);
             // 
-            // label5
+            // lblTopic
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(23, 203);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(61, 25);
-            this.label5.TabIndex = 7;
-            this.label5.Text = "Topic";
+            this.lblTopic.AutoSize = true;
+            this.lblTopic.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTopic.Location = new System.Drawing.Point(23, 203);
+            this.lblTopic.Name = "lblTopic";
+            this.lblTopic.Size = new System.Drawing.Size(61, 25);
+            this.lblTopic.TabIndex = 7;
+            this.lblTopic.Text = "Topic";
             // 
-            // textBox1
+            // txtWord
             // 
-            this.textBox1.Location = new System.Drawing.Point(208, 44);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(346, 34);
-            this.textBox1.TabIndex = 0;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.txtWord.Location = new System.Drawing.Point(208, 44);
+            this.txtWord.Multiline = true;
+            this.txtWord.Name = "txtWord";
+            this.txtWord.Size = new System.Drawing.Size(346, 34);
+            this.txtWord.TabIndex = 0;
+            this.txtWord.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // comboBox1
+            // cmbPartOfSpeech
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cmbPartOfSpeech.FormattingEnabled = true;
+            this.cmbPartOfSpeech.Items.AddRange(new object[] {
             "Noun (n.)",
             "Verb (v.)",
             "Adjective (adj.)",
             "Adverb (adv.)",
             "Preposition (prep.)"});
-            this.comboBox1.Location = new System.Drawing.Point(208, 152);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(346, 24);
-            this.comboBox1.TabIndex = 6;
+            this.cmbPartOfSpeech.Location = new System.Drawing.Point(208, 152);
+            this.cmbPartOfSpeech.Name = "cmbPartOfSpeech";
+            this.cmbPartOfSpeech.Size = new System.Drawing.Size(346, 24);
+            this.cmbPartOfSpeech.TabIndex = 6;
+            this.cmbPartOfSpeech.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
-            // textBox2
+            // txtMeaning
             // 
-            this.textBox2.Location = new System.Drawing.Point(208, 100);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(346, 34);
-            this.textBox2.TabIndex = 1;
+            this.txtMeaning.Location = new System.Drawing.Point(208, 100);
+            this.txtMeaning.Multiline = true;
+            this.txtMeaning.Name = "txtMeaning";
+            this.txtMeaning.Size = new System.Drawing.Size(346, 34);
+            this.txtMeaning.TabIndex = 1;
+            this.txtMeaning.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // label1
             // 
@@ -343,14 +344,14 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(865, 537);
+            this.tabPage2.Size = new System.Drawing.Size(894, 492);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Vocabulary List";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.btnSearch);
+            this.groupBox2.Controls.Add(this.btnSearchList);
             this.groupBox2.Controls.Add(this.searchtxt);
             this.groupBox2.Controls.Add(this.dataGridView1);
             this.groupBox2.Controls.Add(this.btnFilter);
@@ -364,16 +365,16 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "groupBox2";
             // 
-            // btnSearch
+            // btnSearchList
             // 
-            this.btnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearch.Location = new System.Drawing.Point(706, 114);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(110, 39);
-            this.btnSearch.TabIndex = 1;
-            this.btnSearch.Text = "Search";
-            this.btnSearch.UseVisualStyleBackColor = true;
-            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            this.btnSearchList.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearchList.Location = new System.Drawing.Point(706, 114);
+            this.btnSearchList.Name = "btnSearchList";
+            this.btnSearchList.Size = new System.Drawing.Size(110, 39);
+            this.btnSearchList.TabIndex = 1;
+            this.btnSearchList.Text = "Search";
+            this.btnSearchList.UseVisualStyleBackColor = true;
+            this.btnSearchList.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // searchtxt
             // 
@@ -484,7 +485,7 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 25);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(865, 537);
+            this.tabPage3.Size = new System.Drawing.Size(881, 395);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Quiz";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -661,15 +662,16 @@
             this.tabPage6.UseVisualStyleBackColor = true;
             this.tabPage6.Click += new System.EventHandler(this.tabPage6_Click);
             // 
-            // button5
+            // button9
             // 
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(355, 330);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(111, 42);
-            this.button5.TabIndex = 0;
-            this.button5.Text = "Save";
-            this.button5.UseVisualStyleBackColor = true;
+            this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button9.Location = new System.Drawing.Point(754, 0);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(111, 42);
+            this.button9.TabIndex = 2;
+            this.button9.Text = "Log out";
+            this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // groupBox3
             // 
@@ -683,16 +685,15 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Level";
             // 
-            // button6
+            // button8
             // 
-            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Location = new System.Drawing.Point(58, 35);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(92, 42);
-            this.button6.TabIndex = 0;
-            this.button6.Text = "Easy";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
+            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button8.Location = new System.Drawing.Point(58, 153);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(92, 42);
+            this.button8.TabIndex = 2;
+            this.button8.Text = "Dificult";
+            this.button8.UseVisualStyleBackColor = true;
             // 
             // button7
             // 
@@ -704,30 +705,30 @@
             this.button7.Text = "Normal";
             this.button7.UseVisualStyleBackColor = true;
             // 
-            // button8
+            // button6
             // 
-            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.Location = new System.Drawing.Point(58, 153);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(92, 42);
-            this.button8.TabIndex = 2;
-            this.button8.Text = "Dificult";
-            this.button8.UseVisualStyleBackColor = true;
+            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.Location = new System.Drawing.Point(58, 35);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(92, 42);
+            this.button6.TabIndex = 0;
+            this.button6.Text = "Easy";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
-            // button9
+            // button5
             // 
-            this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button9.Location = new System.Drawing.Point(754, 0);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(111, 42);
-            this.button9.TabIndex = 2;
-            this.button9.Text = "Log out";
-            this.button9.UseVisualStyleBackColor = true;
-            this.button9.Click += new System.EventHandler(this.button9_Click);
+            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.Location = new System.Drawing.Point(355, 330);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(111, 42);
+            this.button5.TabIndex = 0;
+            this.button5.Text = "Save";
+            this.button5.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
-            this.ClientSize = new System.Drawing.Size(877, 469);
+            this.ClientSize = new System.Drawing.Size(910, 643);
             this.Controls.Add(this.tabControl1);
             this.Name = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -755,21 +756,21 @@
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.TabPage tabPage4;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblWord;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox txtMeaning;
+        private System.Windows.Forms.TextBox txtWord;
+        private System.Windows.Forms.Label lblMeaning;
+        private System.Windows.Forms.Label lblPartOfSpeech;
+        private System.Windows.Forms.ComboBox cmbPartOfSpeech;
+        private System.Windows.Forms.Label lblTopic;
+        private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.ListBox listBoxTopics;
-        private System.Windows.Forms.TextBox txtSearch;
+        private System.Windows.Forms.TextBox txtTopic;
         private System.Windows.Forms.Button btnRefreshlist;
         private System.Windows.Forms.Button btnFilter;
         private System.Windows.Forms.Button bntDelete;
-        private System.Windows.Forms.Button btnSearch;
+        private System.Windows.Forms.Button btnSearchList;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Word;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
@@ -787,7 +788,6 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.ProgressBar progressBar1;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Timer timer1;
         private System.ComponentModel.IContainer components;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button2;

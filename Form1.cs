@@ -70,14 +70,14 @@ namespace windowforms_sqlsever
             if (listBoxTopics.SelectedItem != null)
             {
                 // Hiển thị mục được chọn trong TextBox
-                txtSearch.Text = listBoxTopics.SelectedItem.ToString();
+                txtTopic.Text = listBoxTopics.SelectedItem.ToString();
             }
         }
 
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string searchQuery = txtSearch.Text.ToLower();
+            string searchQuery = txtTopic.Text.ToLower();
 
             // Nếu không có ký tự nào trong ô tìm kiếm, hiển thị toàn bộ danh sách chủ đề
             if (string.IsNullOrEmpty(searchQuery))
@@ -204,5 +204,61 @@ namespace windowforms_sqlsever
         {
 
         }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        // Danh sách từ vựng
+        List<Vocabulary> vocabularies = new List<Vocabulary>();
+
+        // Lớp Vocabulary
+        public class Vocabulary
+        {
+            public string Word { get; set; }
+            public string Meaning { get; set; }
+            public string PartOfSpeech { get; set; }
+            public string Topic { get; set; }
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            // Kiểm tra dữ liệu đầu vào
+            if (string.IsNullOrWhiteSpace(txtWord.Text) ||
+                string.IsNullOrWhiteSpace(txtMeaning.Text) ||
+                string.IsNullOrWhiteSpace(cmbPartOfSpeech.Text) ||
+                string.IsNullOrWhiteSpace(txtTopic.Text))
+            {
+                MessageBox.Show("Vui lòng nhập đầy đủ thông tin!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // Thêm từ mới vào danh sách
+            Vocabulary newWord = new Vocabulary
+            {
+                Word = txtWord.Text,
+                Meaning = txtMeaning.Text,
+                PartOfSpeech = cmbPartOfSpeech.Text,
+                Topic = txtTopic.Text
+            };
+
+            vocabularies.Add(newWord);
+
+            //// Làm mới DataGridView
+            //RefreshDataGridView();
+
+            // Xóa các ô nhập liệu sau khi thêm
+            txtWord.Clear();
+            txtMeaning.Clear();
+            cmbPartOfSpeech.SelectedIndex = -1;
+            txtTopic.Clear();
+        }
+
     }
 }
