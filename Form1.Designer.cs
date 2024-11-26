@@ -46,7 +46,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.button5 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -83,7 +82,6 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.button5);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.txtenter);
             this.groupBox1.Controls.Add(this.label3);
@@ -567,15 +565,6 @@
             this.tabPage4.Text = "Quiz History";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(577, 101);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 23);
-            this.button5.TabIndex = 16;
-            this.button5.Text = "button5";
-            this.button5.UseVisualStyleBackColor = true;
-            // 
             // Form1
             // 
             this.ClientSize = new System.Drawing.Size(874, 569);
@@ -638,6 +627,5 @@
         private System.ComponentModel.IContainer components;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button5;
     }
 }
