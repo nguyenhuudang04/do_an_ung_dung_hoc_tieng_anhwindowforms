@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Data.SqlClient;
+using System.Data.SQLite;
 using System.Windows.Forms;
 
 namespace windowforms_sqlsever
@@ -11,14 +11,13 @@ namespace windowforms_sqlsever
         public FormLogin()
         {
             InitializeComponent();
-            btnlogin.Click += button1_Click; // Gán sự kiện cho nút "Log in"
         }
 
+
         // Hàm kết nối cơ sở dữ liệu SQL Server
-        private SqlConnection GetConnection()
+        private SQLiteConnection GetConnection()
         {
-            string connectionString = "Data Source=DESKTOP-EK73N0M\\ECUSSQL2008;Initial Catalog=UserDatabase;Integrated Security=True";
-            return new SqlConnection(connectionString);
+            return DatabaseHelper1.GetConnection(); // Sử dụng phương thức tĩnh để lấy kết nối
         }
 
         // Hàm kiểm tra đăng nhập với cơ sở dữ liệu
@@ -29,16 +28,16 @@ namespace windowforms_sqlsever
             // Câu truy vấn kiểm tra tên tài khoản và mật khẩu
             string query = "SELECT COUNT(*) FROM Users WHERE Username = @Username AND Password = @Password";
 
-            using (SqlConnection connection = GetConnection())
+            using (SQLiteConnection connection = GetConnection())
             {
-                SqlCommand command = new SqlCommand(query, connection);
+                SQLiteCommand command = new SQLiteCommand(query, connection);
                 command.Parameters.AddWithValue("@Username", username);
                 command.Parameters.AddWithValue("@Password", password); // Lưu ý rằng mật khẩu chưa được mã hóa, cần mã hóa trong thực tế
 
                 try
                 {
                     connection.Open();
-                    int count = (int)command.ExecuteScalar(); // Đếm số lượng bản ghi khớp
+                    int count = Convert.ToInt32(command.ExecuteScalar()); // Đếm số lượng bản ghi khớp
                     isAuthenticated = count > 0; // Nếu số lượng bản ghi > 0, tài khoản hợp lệ
                 }
                 catch (Exception ex)

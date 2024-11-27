@@ -1,6 +1,5 @@
 ﻿using System;
-using System.Data.SqlClient;
-using System.Text.RegularExpressions;
+using System.Data.SQLite;
 using System.Windows.Forms;
 
 namespace windowforms_sqlsever
@@ -12,34 +11,26 @@ namespace windowforms_sqlsever
             InitializeComponent();
         }
 
-        // Kết nối đến cơ sở dữ liệu
-        private SqlConnection GetConnection()
+        // Kết nối đến cơ sở dữ liệu SQLite thông qua DatabaseHelper
+        private SQLiteConnection GetConnection()
         {
-            string connectionString = "Data Source=DESKTOP-EK73N0M\\ECUSSQL2008;Initial Catalog=UserDatabase;Integrated Security=True";
-            return new SqlConnection(connectionString);
+            return DatabaseHelper1.GetConnection(); // Sử dụng phương thức tĩnh để lấy kết nối
         }
 
-        // Kiểm tra tên tài khoản đã tồn tại trong cơ sở dữ liệu hay chưa
+        // Kiểm tra tên tài khoản đã tồn tại trong cơ sở dữ liệu
         private bool IsUsernameExist(string username)
         {
             bool exists = false;
             string query = "SELECT COUNT(*) FROM Users WHERE Username = @Username";
 
-            using (SqlConnection connection = GetConnection())
+            using (SQLiteConnection connection = GetConnection())
             {
-                SqlCommand command = new SqlCommand(query, connection);
+                SQLiteCommand command = new SQLiteCommand(query, connection);
                 command.Parameters.AddWithValue("@Username", username);
 
-                try
-                {
-                    connection.Open();
-                    int count = (int)command.ExecuteScalar();
-                    exists = count > 0;
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Lỗi kết nối cơ sở dữ liệu: " + ex.Message);
-                }
+                connection.Open();
+                int count = Convert.ToInt32(command.ExecuteScalar());
+                exists = count > 0;
             }
 
             return exists;
@@ -50,69 +41,44 @@ namespace windowforms_sqlsever
         {
             string query = "INSERT INTO Users (Username, Password) VALUES (@Username, @Password)";
 
-            using (SqlConnection connection = GetConnection())
+            using (SQLiteConnection connection = GetConnection())
             {
-                SqlCommand command = new SqlCommand(query, connection);
+                SQLiteCommand command = new SQLiteCommand(query, connection);
                 command.Parameters.AddWithValue("@Username", username);
                 command.Parameters.AddWithValue("@Password", password);
 
-                try
-                {
-                    connection.Open();
-                    command.ExecuteNonQuery();
-                    MessageBox.Show("Tài khoản đã được đăng ký thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    this.Close(); // Đóng form đăng ký sau khi hoàn thành
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Lỗi khi đăng ký tài khoản: " + ex.Message);
-                }
+                connection.Open();
+                command.ExecuteNonQuery();
+                MessageBox.Show("Tài khoản đã được đăng ký thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Close(); // Đóng form đăng ký sau khi hoàn thành
             }
         }
-
-        // Kiểm tra mật khẩu có hợp lệ không
-        
 
         // Sự kiện khi nhấn nút Đăng ký
        
 
-        // Kiểm tra khi thay đổi mật khẩu
-        private void txtPassword_TextChanged(object sender, EventArgs e)
+        private void btnregiter_Click(object sender, EventArgs e)
         {
-            
-        }
+            string username = txtaccount.Text.Trim();
+            string password = txtpass.Text.Trim();
+            string confirmPassword = txtconfirmpass.Text.Trim();
 
-        // Kiểm tra khi thay đổi xác nhận mật khẩu
-        private void txtConfirmPassword_TextChanged(object sender, EventArgs e)
-        {
-         
-        }
+            // Kiểm tra tên tài khoản đã tồn tại chưa
+            if (IsUsernameExist(username))
+            {
+                MessageBox.Show("Tên tài khoản đã tồn tại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
 
-        private void btnregiter_Click_1(object sender, EventArgs e)
-        {
-           
-                string username = txtaccount.Text.Trim();
-                string password = txtpass.Text.Trim();
-                string confirmPassword = txtconfirmpass.Text.Trim();
+            // Kiểm tra mật khẩu và xác nhận mật khẩu có khớp hay không
+            if (password != confirmPassword)
+            {
+                MessageBox.Show("Mật khẩu và xác nhận mật khẩu không khớp!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
 
-                // Kiểm tra tên tài khoản đã tồn tại chưa
-                if (IsUsernameExist(username))
-                {
-                    MessageBox.Show("Tên tài khoản đã tồn tại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return;
-                }
-
-                // Kiểm tra mật khẩu và xác nhận mật khẩu có khớp hay không
-                if (password != confirmPassword)
-                {
-                    MessageBox.Show("Mật khẩu và xác nhận mật khẩu không khớp!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return;
-                }
-
-
-                // Đăng ký tài khoản mới
-                RegisterAccount(username, password);
-            
+            // Đăng ký tài khoản mới
+            RegisterAccount(username, password);
         }
     }
 }
