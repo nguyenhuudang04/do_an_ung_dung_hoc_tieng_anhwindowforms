@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Data.SQLite;
+using System.Security.Principal;
 using System.Windows.Forms;
 
 namespace windowforms_sqlsever
@@ -63,6 +64,12 @@ namespace windowforms_sqlsever
             string password = txtpass.Text.Trim();
             string confirmPassword = txtconfirmpass.Text.Trim();
 
+            if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password) || string.IsNullOrEmpty(confirmPassword))
+            {
+                MessageBox.Show("Vui lòng nhập đầy đủ thông tin!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return; // Dừng lại nếu có trường nhập liệu bị bỏ trống
+            }
+
             // Kiểm tra tên tài khoản đã tồn tại chưa
             if (IsUsernameExist(username))
             {
@@ -80,5 +87,20 @@ namespace windowforms_sqlsever
             // Đăng ký tài khoản mới
             RegisterAccount(username, password);
         }
+
+        private void toolTip1_Popup(object sender, PopupEventArgs e)
+        {
+
+        }
+        private void FormRegister_Load(object sender, EventArgs e)
+        {
+            // Cung cấp mô tả cho các điều khiển
+            toolTip1.SetToolTip(txtaccount, "Nhập tên tài khoản của bạn");
+            toolTip1.SetToolTip(txtpass, "Mật khẩu phải có ít nhất 8 ký tự");
+            toolTip1.SetToolTip(txtconfirmpass, "Xác nhận lại mật khẩu của bạn");
+          
+        }
+
     }
+
 }

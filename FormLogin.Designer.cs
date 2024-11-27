@@ -72,7 +72,7 @@
             this.txtaccount.Multiline = true;
             this.txtaccount.Name = "txtaccount";
             this.txtaccount.Size = new System.Drawing.Size(290, 40);
-            this.txtaccount.TabIndex = 3;
+            this.txtaccount.TabIndex = 0;
             // 
             // txtpass
             // 
@@ -81,14 +81,14 @@
             this.txtpass.Name = "txtpass";
             this.txtpass.PasswordChar = '*';
             this.txtpass.Size = new System.Drawing.Size(290, 40);
-            this.txtpass.TabIndex = 4;
+            this.txtpass.TabIndex = 1;
             // 
             // btnregister
             // 
             this.btnregister.Location = new System.Drawing.Point(176, 262);
             this.btnregister.Name = "btnregister";
             this.btnregister.Size = new System.Drawing.Size(118, 46);
-            this.btnregister.TabIndex = 5;
+            this.btnregister.TabIndex = 3;
             this.btnregister.Text = "Register";
             this.btnregister.UseVisualStyleBackColor = true;
             this.btnregister.Click += new System.EventHandler(this.button2_Click);

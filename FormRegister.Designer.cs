@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.txtaccount = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -35,6 +36,7 @@
             this.btnregiter = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.txtconfirmpass = new System.Windows.Forms.TextBox();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.SuspendLayout();
             // 
             // txtaccount
@@ -43,26 +45,26 @@
             this.txtaccount.Multiline = true;
             this.txtaccount.Name = "txtaccount";
             this.txtaccount.Size = new System.Drawing.Size(290, 40);
-            this.txtaccount.TabIndex = 4;
+            this.txtaccount.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(88, 77);
+            this.label1.Location = new System.Drawing.Point(123, 77);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(125, 57);
             this.label1.TabIndex = 5;
-            this.label1.Text = "Account";
+            this.label1.Text = "Account :";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(100, 175);
+            this.label2.Location = new System.Drawing.Point(123, 175);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(125, 49);
             this.label2.TabIndex = 6;
-            this.label2.Text = "Password";
+            this.label2.Text = "Password :";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // txtpass
@@ -72,14 +74,14 @@
             this.txtpass.Name = "txtpass";
             this.txtpass.PasswordChar = '*';
             this.txtpass.Size = new System.Drawing.Size(290, 40);
-            this.txtpass.TabIndex = 7;
+            this.txtpass.TabIndex = 1;
             // 
             // btnregiter
             // 
             this.btnregiter.Location = new System.Drawing.Point(579, 295);
             this.btnregiter.Name = "btnregiter";
             this.btnregiter.Size = new System.Drawing.Size(118, 46);
-            this.btnregiter.TabIndex = 8;
+            this.btnregiter.TabIndex = 3;
             this.btnregiter.Text = "Register";
             this.btnregiter.UseVisualStyleBackColor = true;
             this.btnregiter.Click += new System.EventHandler(this.btnregiter_Click);
@@ -91,7 +93,7 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(213, 49);
             this.label3.TabIndex = 9;
-            this.label3.Text = "Confirm Password";
+            this.label3.Text = "Confirm Password :";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // txtconfirmpass
@@ -101,7 +103,7 @@
             this.txtconfirmpass.Name = "txtconfirmpass";
             this.txtconfirmpass.PasswordChar = '*';
             this.txtconfirmpass.Size = new System.Drawing.Size(290, 40);
-            this.txtconfirmpass.TabIndex = 10;
+            this.txtconfirmpass.TabIndex = 2;
             // 
             // FormRegister
             // 
@@ -131,5 +133,6 @@
         private System.Windows.Forms.Button btnregiter;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtconfirmpass;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }
