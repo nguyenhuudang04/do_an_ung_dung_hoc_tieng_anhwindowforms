@@ -6,10 +6,10 @@
         private void InitializeComponent()
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabTopic = new System.Windows.Forms.TabPage();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.lblWord = new System.Windows.Forms.Label();
-            this.txtenter = new System.Windows.Forms.Button();
+            this.btnAdd = new System.Windows.Forms.Button();
             this.lblMeaning = new System.Windows.Forms.Label();
             this.listBoxTopics = new System.Windows.Forms.ListBox();
             this.btnSearch = new System.Windows.Forms.Button();
@@ -20,7 +20,7 @@
             this.cmbPartOfSpeech = new System.Windows.Forms.ComboBox();
             this.txtMeaning = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.tabVocabularyList = new System.Windows.Forms.TabPage();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnSearchList = new System.Windows.Forms.Button();
             this.searchtxt = new System.Windows.Forms.TextBox();
@@ -33,7 +33,7 @@
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnRefreshlist = new System.Windows.Forms.Button();
             this.bntDelete = new System.Windows.Forms.Button();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.tabQuiz = new System.Windows.Forms.TabPage();
             this.button4 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.textBox3 = new System.Windows.Forms.TextBox();
@@ -43,7 +43,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.tabQuizHistory = new System.Windows.Forms.TabPage();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -59,13 +59,13 @@
             this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
-            this.tabPage1.SuspendLayout();
+            this.tabTopic.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            this.tabPage2.SuspendLayout();
+            this.tabVocabularyList.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.tabPage3.SuspendLayout();
-            this.tabPage4.SuspendLayout();
+            this.tabQuiz.SuspendLayout();
+            this.tabQuizHistory.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.tabPage6.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -73,10 +73,10 @@
             // 
             // tabControl1
             // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Controls.Add(this.tabPage3);
-            this.tabControl1.Controls.Add(this.tabPage4);
+            this.tabControl1.Controls.Add(this.tabTopic);
+            this.tabControl1.Controls.Add(this.tabVocabularyList);
+            this.tabControl1.Controls.Add(this.tabQuiz);
+            this.tabControl1.Controls.Add(this.tabQuizHistory);
             this.tabControl1.Controls.Add(this.tabPage6);
             this.tabControl1.Location = new System.Drawing.Point(-4, 67);
             this.tabControl1.Name = "tabControl1";
@@ -84,23 +84,23 @@
             this.tabControl1.Size = new System.Drawing.Size(902, 521);
             this.tabControl1.TabIndex = 0;
             // 
-            // tabPage1
+            // tabTopic
             // 
-            this.tabPage1.Controls.Add(this.groupBox1);
-            this.tabPage1.Controls.Add(this.label1);
-            this.tabPage1.Location = new System.Drawing.Point(4, 25);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(894, 492);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Topic";
-            this.tabPage1.UseVisualStyleBackColor = true;
-            this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click_1);
+            this.tabTopic.Controls.Add(this.groupBox1);
+            this.tabTopic.Controls.Add(this.label1);
+            this.tabTopic.Location = new System.Drawing.Point(4, 25);
+            this.tabTopic.Name = "tabTopic";
+            this.tabTopic.Padding = new System.Windows.Forms.Padding(3);
+            this.tabTopic.Size = new System.Drawing.Size(894, 492);
+            this.tabTopic.TabIndex = 0;
+            this.tabTopic.Text = "Topic";
+            this.tabTopic.UseVisualStyleBackColor = true;
+            this.tabTopic.Click += new System.EventHandler(this.tabPage1_Click_1);
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.lblWord);
-            this.groupBox1.Controls.Add(this.txtenter);
+            this.groupBox1.Controls.Add(this.btnAdd);
             this.groupBox1.Controls.Add(this.lblMeaning);
             this.groupBox1.Controls.Add(this.listBoxTopics);
             this.groupBox1.Controls.Add(this.btnSearch);
@@ -127,15 +127,15 @@
             this.lblWord.TabIndex = 3;
             this.lblWord.Text = "Enter the word";
             // 
-            // txtenter
+            // btnAdd
             // 
-            this.txtenter.Location = new System.Drawing.Point(599, 392);
-            this.txtenter.Name = "txtenter";
-            this.txtenter.Size = new System.Drawing.Size(88, 42);
-            this.txtenter.TabIndex = 15;
-            this.txtenter.Text = "Add";
-            this.txtenter.UseVisualStyleBackColor = true;
-            //this.txtenter.Click += new System.EventHandler(this.txtenter_Click);
+            this.btnAdd.Location = new System.Drawing.Point(599, 392);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(88, 42);
+            this.btnAdd.TabIndex = 15;
+            this.btnAdd.Text = "Add";
+            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click_1);
             // 
             // lblMeaning
             // 
@@ -338,16 +338,16 @@
             this.label1.Size = new System.Drawing.Size(0, 16);
             this.label1.TabIndex = 2;
             // 
-            // tabPage2
+            // tabVocabularyList
             // 
-            this.tabPage2.Controls.Add(this.groupBox2);
-            this.tabPage2.Location = new System.Drawing.Point(4, 25);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(894, 492);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Vocabulary List";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.tabVocabularyList.Controls.Add(this.groupBox2);
+            this.tabVocabularyList.Location = new System.Drawing.Point(4, 25);
+            this.tabVocabularyList.Name = "tabVocabularyList";
+            this.tabVocabularyList.Padding = new System.Windows.Forms.Padding(3);
+            this.tabVocabularyList.Size = new System.Drawing.Size(894, 492);
+            this.tabVocabularyList.TabIndex = 1;
+            this.tabVocabularyList.Text = "Vocabulary List";
+            this.tabVocabularyList.UseVisualStyleBackColor = true;
             // 
             // groupBox2
             // 
@@ -460,6 +460,7 @@
             this.btnRefreshlist.TabIndex = 4;
             this.btnRefreshlist.Text = "Refresh";
             this.btnRefreshlist.UseVisualStyleBackColor = true;
+            this.btnRefreshlist.Click += new System.EventHandler(this.btnRefreshlist_Click);
             // 
             // bntDelete
             // 
@@ -471,24 +472,24 @@
             this.bntDelete.Text = "Delete";
             this.bntDelete.UseVisualStyleBackColor = true;
             // 
-            // tabPage3
+            // tabQuiz
             // 
-            this.tabPage3.Controls.Add(this.button4);
-            this.tabPage3.Controls.Add(this.button2);
-            this.tabPage3.Controls.Add(this.textBox3);
-            this.tabPage3.Controls.Add(this.label9);
-            this.tabPage3.Controls.Add(this.progressBar1);
-            this.tabPage3.Controls.Add(this.label7);
-            this.tabPage3.Controls.Add(this.label8);
-            this.tabPage3.Controls.Add(this.button3);
-            this.tabPage3.Controls.Add(this.label6);
-            this.tabPage3.Location = new System.Drawing.Point(4, 25);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(881, 395);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Quiz";
-            this.tabPage3.UseVisualStyleBackColor = true;
+            this.tabQuiz.Controls.Add(this.button4);
+            this.tabQuiz.Controls.Add(this.button2);
+            this.tabQuiz.Controls.Add(this.textBox3);
+            this.tabQuiz.Controls.Add(this.label9);
+            this.tabQuiz.Controls.Add(this.progressBar1);
+            this.tabQuiz.Controls.Add(this.label7);
+            this.tabQuiz.Controls.Add(this.label8);
+            this.tabQuiz.Controls.Add(this.button3);
+            this.tabQuiz.Controls.Add(this.label6);
+            this.tabQuiz.Location = new System.Drawing.Point(4, 25);
+            this.tabQuiz.Name = "tabQuiz";
+            this.tabQuiz.Padding = new System.Windows.Forms.Padding(3);
+            this.tabQuiz.Size = new System.Drawing.Size(894, 492);
+            this.tabQuiz.TabIndex = 2;
+            this.tabQuiz.Text = "Quiz";
+            this.tabQuiz.UseVisualStyleBackColor = true;
             // 
             // button4
             // 
@@ -578,16 +579,16 @@
             this.label6.Text = "label6";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // tabPage4
+            // tabQuizHistory
             // 
-            this.tabPage4.Controls.Add(this.dataGridView2);
-            this.tabPage4.Location = new System.Drawing.Point(4, 25);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(865, 537);
-            this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "Quiz History";
-            this.tabPage4.UseVisualStyleBackColor = true;
+            this.tabQuizHistory.Controls.Add(this.dataGridView2);
+            this.tabQuizHistory.Location = new System.Drawing.Point(4, 25);
+            this.tabQuizHistory.Name = "tabQuizHistory";
+            this.tabQuizHistory.Padding = new System.Windows.Forms.Padding(3);
+            this.tabQuizHistory.Size = new System.Drawing.Size(894, 492);
+            this.tabQuizHistory.TabIndex = 3;
+            this.tabQuizHistory.Text = "Quiz History";
+            this.tabQuizHistory.UseVisualStyleBackColor = true;
             // 
             // dataGridView2
             // 
@@ -656,7 +657,7 @@
             this.tabPage6.Location = new System.Drawing.Point(4, 25);
             this.tabPage6.Name = "tabPage6";
             this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage6.Size = new System.Drawing.Size(865, 537);
+            this.tabPage6.Size = new System.Drawing.Size(894, 492);
             this.tabPage6.TabIndex = 5;
             this.tabPage6.Text = "tabPage6";
             this.tabPage6.UseVisualStyleBackColor = true;
@@ -733,17 +734,17 @@
             this.Name = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.tabControl1.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
-            this.tabPage1.PerformLayout();
+            this.tabTopic.ResumeLayout(false);
+            this.tabTopic.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.tabPage2.ResumeLayout(false);
+            this.tabVocabularyList.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.tabPage3.ResumeLayout(false);
-            this.tabPage3.PerformLayout();
-            this.tabPage4.ResumeLayout(false);
+            this.tabQuiz.ResumeLayout(false);
+            this.tabQuiz.PerformLayout();
+            this.tabQuizHistory.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.tabPage6.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
@@ -752,10 +753,10 @@
         }
 
         private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.TabPage tabPage4;
+        private System.Windows.Forms.TabPage tabTopic;
+        private System.Windows.Forms.TabPage tabVocabularyList;
+        private System.Windows.Forms.TabPage tabQuiz;
+        private System.Windows.Forms.TabPage tabQuizHistory;
         private System.Windows.Forms.Label lblWord;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtMeaning;
@@ -778,7 +779,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn PartofSpeech;
         private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.TextBox searchtxt;
-        private System.Windows.Forms.Button txtenter;
+        private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;

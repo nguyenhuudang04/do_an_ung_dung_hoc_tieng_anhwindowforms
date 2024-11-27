@@ -229,6 +229,17 @@ namespace windowforms_sqlsever
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
+           
+        }
+
+        private void btnRefreshlist_Click(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = null; 
+            dataGridView1.DataSource = vocabularies; 
+        }
+
+        private void btnAdd_Click_1(object sender, EventArgs e)
+        {
             // Kiểm tra dữ liệu đầu vào
             if (string.IsNullOrWhiteSpace(txtWord.Text) ||
                 string.IsNullOrWhiteSpace(txtMeaning.Text) ||
@@ -258,6 +269,19 @@ namespace windowforms_sqlsever
             txtMeaning.Clear();
             cmbPartOfSpeech.SelectedIndex = -1;
             txtTopic.Clear();
+        }
+        private void RefreshdataGridView1()
+        {
+            dataGridView1.DataSource = null; // Xóa liên kết cũ
+            dataGridView1.DataSource = vocabularies; // Gán dữ liệu mới
+        }
+
+        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (tabControl1.SelectedTab == tabVocabularyList)
+            {
+                RefreshdataGridView1();
+            }
         }
 
     }
