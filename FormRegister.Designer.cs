@@ -28,22 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtaccount = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.txtpass = new System.Windows.Forms.TextBox();
+            this.btnregiter = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtconfirmpass = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // textBox1
+            // txtaccount
             // 
-            this.textBox1.Location = new System.Drawing.Point(254, 94);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(290, 40);
-            this.textBox1.TabIndex = 4;
+            this.txtaccount.Location = new System.Drawing.Point(254, 94);
+            this.txtaccount.Multiline = true;
+            this.txtaccount.Name = "txtaccount";
+            this.txtaccount.Size = new System.Drawing.Size(290, 40);
+            this.txtaccount.TabIndex = 4;
             // 
             // label1
             // 
@@ -65,24 +65,24 @@
             this.label2.Text = "Password";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox2
+            // txtpass
             // 
-            this.textBox2.Location = new System.Drawing.Point(254, 175);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.PasswordChar = '*';
-            this.textBox2.Size = new System.Drawing.Size(290, 40);
-            this.textBox2.TabIndex = 7;
+            this.txtpass.Location = new System.Drawing.Point(254, 175);
+            this.txtpass.Multiline = true;
+            this.txtpass.Name = "txtpass";
+            this.txtpass.PasswordChar = '*';
+            this.txtpass.Size = new System.Drawing.Size(290, 40);
+            this.txtpass.TabIndex = 7;
             // 
-            // button2
+            // btnregiter
             // 
-            this.button2.Location = new System.Drawing.Point(579, 295);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(118, 46);
-            this.button2.TabIndex = 8;
-            this.button2.Text = "Register";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnregiter.Location = new System.Drawing.Point(579, 295);
+            this.btnregiter.Name = "btnregiter";
+            this.btnregiter.Size = new System.Drawing.Size(118, 46);
+            this.btnregiter.TabIndex = 8;
+            this.btnregiter.Text = "Register";
+            this.btnregiter.UseVisualStyleBackColor = true;
+            this.btnregiter.Click += new System.EventHandler(this.btnregiter_Click_1);
             // 
             // label3
             // 
@@ -94,29 +94,29 @@
             this.label3.Text = "Confirm Password";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox3
+            // txtconfirmpass
             // 
-            this.textBox3.Location = new System.Drawing.Point(254, 257);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.PasswordChar = '*';
-            this.textBox3.Size = new System.Drawing.Size(290, 40);
-            this.textBox3.TabIndex = 10;
+            this.txtconfirmpass.Location = new System.Drawing.Point(254, 257);
+            this.txtconfirmpass.Multiline = true;
+            this.txtconfirmpass.Name = "txtconfirmpass";
+            this.txtconfirmpass.PasswordChar = '*';
+            this.txtconfirmpass.Size = new System.Drawing.Size(290, 40);
+            this.txtconfirmpass.TabIndex = 10;
             // 
             // FormRegister
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.txtconfirmpass);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.btnregiter);
+            this.Controls.Add(this.txtpass);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtaccount);
             this.Name = "FormRegister";
-            this.Text = "FormRegister";
+            this.Text = "Register";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -124,12 +124,12 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtaccount;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox txtpass;
+        private System.Windows.Forms.Button btnregiter;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtconfirmpass;
     }
 }
